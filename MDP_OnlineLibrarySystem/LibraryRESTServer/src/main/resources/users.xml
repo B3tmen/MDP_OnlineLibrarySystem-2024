@@ -1,0 +1,57 @@
+<LibraryUsers>
+  <libraryUsers>
+    <libraryUsers type="member">
+      <id>1</id>
+      <username>username1</username>
+      <password>961b6dd3ede3cb8ecbaacbd68de040cd78eb2ed5889130cceb4c49268ea4d506</password>
+      <firstName>ivan</firstName>
+      <lastName>kuruzovic</lastName>
+      <address>adress1</address>
+      <email>mail1.com</email>
+      <blocked>false</blocked>
+      <activeAccount>true</activeAccount>
+      <onlineStatus>false</onlineStatus>
+    </libraryUsers>
+    <libraryUsers type="member">
+      <id>2</id>
+      <username>username2</username>
+      <password>3b64db95cb55c763391c707108489ae18b4112d783300de38e033b4c98c3deaf</password>
+      <firstName>ivan</firstName>
+      <lastName>kuruzovic</lastName>
+      <address>adress2</address>
+      <email>mail2.com</email>
+      <blocked>true</blocked>
+      <activeAccount>true</activeAccount>
+      <onlineStatus>false</onlineStatus>
+    </libraryUsers>
+    <libraryUsers type="librarian">
+      <id>0</id>
+      <username>lib1</username>
+      <password>406892809c1d9de3b80b9ba86f7b332c6cd8f8d131d69bb1c3f0ab5c9b668b5f</password>
+    </libraryUsers>
+    <libraryUsers type="member">
+      <id>0</id>
+      <username>username3</username>
+      <password>355b1bbfc96725cdce8f4a2708fda310a80e6d13315aec4e5eed2a75fe8032ce</password>
+      <firstName>fname</firstName>
+      <lastName>lname</lastName>
+      <address>adr1</address>
+      <email>mail.com</email>
+      <blocked>false</blocked>
+      <activeAccount>false</activeAccount>
+      <onlineStatus>false</onlineStatus>
+    </libraryUsers>
+    <libraryUsers type="member">
+      <id>0</id>
+      <username>username5</username>
+      <password>961b6dd3ede3cb8ecbaacbd68de040cd78eb2ed5889130cceb4c49268ea4d506</password>
+      <firstName>fname</firstName>
+      <lastName>lname</lastName>
+      <address>adresa1</address>
+      <email>mail.com</email>
+      <blocked>false</blocked>
+      <activeAccount>true</activeAccount>
+      <onlineStatus>false</onlineStatus>
+    </libraryUsers>
+  </libraryUsers>
+</LibraryUsers>

@@ -1,0 +1,121 @@
+NAPOMENA: Pošto ćemo koristiti Maven za projekat, nema potrebe da skidamo na lokalnu mašinu JAR fajlove za dependency-e, jer će Maven automatski generator to uraditi za nas, navodeći dependency-e u tagovima u pom.xml fajlu
+
+Serveri i portovi: Chat(9000), SupplierServer(9001), Multicast(9002 - clanovi, 9003 - biblioteka)
+
+INTELIJ IDEA:
+-------------
+New Project -> Java, za generator staviti Maven od InteliJ-Maven-Gradle. Proizvoljno postaviti group ID (npr. org.unibl.etf). Generisati.
+===============================
+Dodati module po potrebi organizovanosti projekta i GUI-e.
+
+Sljedece vazi za GUI module:
+--------------------------------
+U pom.xml fajlu dodati:
+    <properties>	<--- Automatski generisano
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <javafx.version>20.0.1</javafx.version>		<!-- (ko god da ovo gleda u buducnosti, promijeniti verziju na neku noviju) -->
+        <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>	
+    </properties>
+
+
+    <dependencies>	<!-- OVO SVE (Maven mora znati sa kakvim bibliotekama radi, mora ih imati) -->
+        <dependency> 	<!--	same kontrole JavaFX-a -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>	<!--	fxml funkcije i objekti, npr. FXMLLoader klasa -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>	<!-- OVO SVE -->
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>${javafx.maven.plugin.version}</version>
+                <configuration>
+                    <mainClass>org.unibl.etf.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+--------------------------------
+
+Sljedece vazi za REST kroz Maven projekat/modul. Dodati u pom.xml fajl (u tagove <dependencies>...</dependencies>) dependency-e:
+--------------------------------
+<!-- Jersey 3.x, versions used - Aug 2024. We need the 'core', 'containers' and 'inject' dependencies, as well as the 'jakarta.servlet-api' for the ServletContainer in web.xml  -->
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.inject/jersey-hk2 -->
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+	------------------------------------------------
+	<!-- REST server mora znati kako interpretirati zahtjeve pristigle u JSON formatu sa @Consumes(APPL._JSON) -->
+	<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>4.0.5</version>
+        </dependency>
+
+Source: https://dzone.com/articles/rest-webservices-using-jersey-2x-and-maven-1. Po potrebi projekta moguce je dodati i druge dependency-e/biblioteke, kao npr. Gson itd.
+===================================
+Pokretanje kroz Run/Debug Configurations (InteliJ IDEA):
+
+[] + -> Maven -> Run (ukucati u text box javafx:run)
+[] Working Directory postaviti na naziv modula odakle se GUI pokrece, tj. aplikacija koja se pokrece u tom modulu u kojem se nalazi (npr. LibraryMemberGui)

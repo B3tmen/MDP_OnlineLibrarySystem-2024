@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="548.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" > <!-- fx:controller="org.unibl.etf.controllers.PendingBookOrdersController" -->
+   <children>
+      <TableView fx:id="bookOrdersTableView" layoutX="16.0" layoutY="91.0" prefHeight="442.0" prefWidth="807.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="91.0">
+         <columns>
+            <TableColumn fx:id="orderIdColumn" prefWidth="75.0" text="Order ID" />
+            <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="frontPageColumn" prefWidth="75.0" text="Front page" />
+            <TableColumn fx:id="isbnColumn" prefWidth="75.0" text="Book ISBN" />
+            <TableColumn fx:id="bookTitleColumn" prefWidth="75.0" text="Book Title" />
+            <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="releaseDateColumn" prefWidth="75.0" text="Release date" />
+            <TableColumn fx:id="languageColumn" prefWidth="75.0" text="Language" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="569.0" layoutY="40.0" prefHeight="39.0" prefWidth="323.0" AnchorPane.rightAnchor="19.0">
+         <children>
+            <Button layoutX="209.0" layoutY="7.0" mnemonicParsing="false" onAction="#denyOrderAction" prefHeight="25.0" prefWidth="114.0" text="Deny order" />
+            <Button layoutX="48.0" layoutY="7.0" mnemonicParsing="false" onAction="#approveOrderAction" prefHeight="25.0" prefWidth="114.0" text="Approve order" />
+         </children>
+      </Pane>
+      <Label layoutX="16.0" layoutY="14.0" text="Currently awaiting orders:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberOfWaitingOrdersLabel" layoutX="234.0" layoutY="15.0" prefHeight="27.0" prefWidth="49.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="16.0" layoutY="47.0" mnemonicParsing="false" onAction="#takeOrderAction" prefHeight="25.0" prefWidth="106.0" text="Take an order" />
+   </children>
+</AnchorPane>

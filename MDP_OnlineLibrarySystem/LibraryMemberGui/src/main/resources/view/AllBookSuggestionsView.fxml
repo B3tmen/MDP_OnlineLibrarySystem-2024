@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="462.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" > <!-- fx:controller="org.unibl.etf.controllers.AllBookSuggestionsController" -->
+   <children>
+      <TableView fx:id="bookSuggestionsTableView" layoutX="27.0" layoutY="50.0" prefHeight="395.0" prefWidth="793.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="approvedColumn" prefWidth="75.0" text="APPROVED" />
+          <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Book title" />
+            <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="languageColumn" prefWidth="75.0" text="Language" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

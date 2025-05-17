@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="612.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"> <!--  fx:controller="org.unibl.etf.controllers.UpdateBookController" -->
+   <children>
+      <Pane layoutX="24.0" layoutY="20.0" prefHeight="543.0" prefWidth="806.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="bookAuthorTextField" layoutX="98.0" layoutY="88.0" prefHeight="32.0" prefWidth="142.0" style="-fx-background-color: transparent; -fx-border-color: #2c3e50; -fx-border-width: 0 0 2 0;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bookTitleTextField" layoutX="98.0" layoutY="34.0" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: transparent; -fx-border-color: #2c3e50; -fx-border-width: 0 0 2 0;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="bookContentTextArea" layoutX="83.0" layoutY="266.0" prefHeight="197.0" prefWidth="620.0" />
+            <TextField fx:id="bookLanguageTextField" layoutX="98.0" layoutY="199.0" prefHeight="32.0" prefWidth="142.0" style="-fx-background-color: transparent; -fx-border-color: #2c3e50; -fx-border-width: 0 0 2 0;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" layoutY="45.0" text="Book title" />
+            <Label layoutX="16.0" layoutY="95.0" text="Author" />
+            <Label layoutX="15.0" layoutY="159.0" text="Release date" />
+            <Label layoutX="14.0" layoutY="196.0" prefHeight="39.0" prefWidth="52.0" text="Language" wrapText="true" />
+            <Label layoutX="11.0" layoutY="266.0" text="Content" />
+            <TextField fx:id="bookFrontPageTextField" layoutX="533.0" layoutY="42.0" prefHeight="32.0" prefWidth="172.0" style="-fx-background-color: transparent; -fx-border-color: #2c3e50; -fx-border-width: 0 0 2 0;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="437.0" layoutY="50.0" text="Front page" />
+            <ImageView fx:id="bookFrontPageImageView" fitHeight="150.0" fitWidth="200.0" layoutX="433.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="713.0" layoutY="49.0" mnemonicParsing="false" onAction="#chooseFrontPageImageAction" text="..." />
+            <DatePicker fx:id="releaseDateDatePicker" layoutX="98.0" layoutY="155.0" prefHeight="25.0" prefWidth="142.0" />
+         </children>
+      </Pane>
+      <Button layoutX="728.0" layoutY="583.0" mnemonicParsing="false" onAction="#finishAddingBookAction" prefHeight="39.0" prefWidth="102.0" text="Finish" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="47.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="528.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" > <!-- fx:controller="org.unibl.etf.controllers.BookDetailsController" -->
+   <children>
+      <BorderPane layoutX="252.0" layoutY="31.0" prefHeight="528.0" prefWidth="876.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="96.0" prefWidth="876.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="232.0" layoutY="14.0" prefHeight="56.0" prefWidth="407.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <Label layoutX="105.0" layoutY="6.0" text="BOOK DETAILS">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Book Title">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="bookTitleTextField" layoutX="121.0" layoutY="6.0" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: transparent; -fx-border-color: #16a085; -fx-border-width: 0 0 2 0;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="contentTextArea" layoutX="21.0" layoutY="157.0" prefHeight="252.0" prefWidth="836.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="157.0" />
+                  <Pane layoutX="445.0" layoutY="3.0" prefHeight="73.0" prefWidth="417.0" AnchorPane.rightAnchor="14.0">
+                     <children>
+                        <Label layoutY="14.0" text="Front page">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="frontPageImageView" fitHeight="170.0" fitWidth="170.0" layoutX="186.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="307.0" layoutY="92.0" prefHeight="55.0" prefWidth="262.0" AnchorPane.rightAnchor="307.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="13.0" text="First 100 lines of content">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

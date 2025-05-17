@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="958.0" stylesheets="@../css/LibraryMemberMainCss.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" > <!-- fx:controller="org.unibl.etf.controllers.LibraryMemberMainController" -->
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="96.0" prefWidth="935.0" style="-fx-background-color: #16a085;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutY="20.0" prefHeight="36.0" prefWidth="152.0" style="-fx-background-color: #16a085;" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Button fx:id="sideBarButton" mnemonicParsing="false" onMouseClicked="#hideSideBar">
+                           <graphic>
+                              <FontIcon fx:id="sidebarButtonIcon" iconColor="WHITE" iconLiteral="fas-bars" iconSize="25" />
+                           </graphic>
+                        </Button>
+                        <Label text="MENU" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="152.0" layoutY="30.0" text="Welcome," textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="customerUsernameLabel" layoutX="223.0" layoutY="25.0" text="customer username" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="831.0" layoutY="8.0" prefHeight="80.0" prefWidth="106.0" AnchorPane.rightAnchor="21.0">
+                     <children>
+                        <ImageView fitHeight="74.0" fitWidth="107.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/library-icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <VBox prefHeight="520.0" prefWidth="150.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="sideBarContainerVBox" prefHeight="484.0" prefWidth="574.0" style="-fx-background-color: #16a085;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="accountButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBooksAction" prefHeight="80.0" style="-fx-background-color: #16a085;" styleClass="sideBarItem" text="View Books" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fas-book" iconSize="20" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showChatSectionAction" prefHeight="80.0" prefWidth="110.0" style="-fx-background-color: #16a085;" styleClass="sideBarItem" text="Chat" textFill="WHITE">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fab-facebook-messenger" iconSize="20" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBookWriteSuggestionAction" prefHeight="80.0" prefWidth="110.0" style="-fx-background-color: #16a085;" styleClass="sideBarItem" text="Write a Suggestion" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fas-book-reader" iconSize="20" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAllBookRequestsAction" prefHeight="80.0" prefWidth="110.0" style="-fx-background-color: #16a085;" styleClass="sideBarItem" text="See Book Suggestions" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fas-book-open" iconSize="20" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane prefHeight="84.0" prefWidth="150.0" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="logOutButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logOutAction" prefHeight="80.0" style="-fx-background-color: #16a085;" styleClass="sideBarItem" text="Log out" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fas-sign-out-alt" iconSize="20" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="mainContentAnchorPane" prefHeight="524.0" prefWidth="808.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

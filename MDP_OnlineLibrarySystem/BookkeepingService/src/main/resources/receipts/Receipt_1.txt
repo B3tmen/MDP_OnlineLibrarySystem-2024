@@ -1,0 +1,10 @@
+=================================== GENERATED RECEIPT FOR ORDER ===================================
+
+Ordered books:
+Quantity   ISBN                           Book title                     Author                                   Release date                                  Language                                
+2          978-877-652625-6496-0          Alice's Adventures in Wonderland Lewis Carroll                            Tue May 19 00:00:00 CEST 2009                 English                                 
+
+TOTAL PRICE: 129,89
+Created on: Sun Sep 01 22:35:30 CEST 2024
+VAT to pay (17.0%): 22,08
+

@@ -1,0 +1,10 @@
+=================================== GENERATED RECEIPT FOR ORDER ===================================
+
+Ordered bookOrders:
+ISBN       Book title                     Author                                   Release date                                  Language                                
+1          t1                             a1                                       Wed Aug 28 09:26:57 CEST 2024                 l1                                      
+
+TOTAL PRICE: 57,89
+Created on: Wed Aug 28 09:28:07 CEST 2024
+VAT to pay (17.0%): 9,84
+
